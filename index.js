@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 
 require('./models/Personas');
-mongoose.connect(keys.MONGO_URL, { useNewUrlParser: true } );
+mongoose.connect(keys.MONGO_URL);
 
 const pr = require('./routes/personasRoutes')(app);
 
